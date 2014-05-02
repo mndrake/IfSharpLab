@@ -5,6 +5,7 @@
 // http://social.msdn.microsoft.com/Forums/vstudio/en-US/12a1c749-b320-4ce9-aff7-9de0d7fd30ea/how-to-save-or-serialize-a-metafile-solution-found?forum=csharpgeneral
 
 open System
+open System.Drawing
 open System.Runtime.InteropServices
 
 [<Literal>] 
@@ -23,7 +24,49 @@ extern IntPtr private GetDesktopWindow()
 extern int private GetEnhMetaFileBits(int hemf, int cbBuffer, byte[] lpbBuffer)
 
 open System.IO
+open System.Drawing
 open System.Drawing.Imaging
+
+let fixedSize(img : Image, format, width : int, height : int) =
+    let sourceWidth = img.Width
+    let sourceHeight = img.Height
+    let sourceX = 0
+    let sourceY = 0
+    let mutable destX = 0
+    let mutable destY = 0
+
+    let mutable nPercent = 0.0
+    let nPercentH = 0.0
+
+    let nPercentW = float width / float sourceWidth
+    let nPercentH =  float height / float sourceHeight
+
+    if (nPercentH < nPercentW) then
+        nPercent <- nPercentH
+        destX <- System.Convert.ToInt32((float width - (float sourceWidth * nPercent)) / 2.0)
+    else
+        nPercent <- nPercentW
+        destY <- System.Convert.ToInt32((float height - (float sourceHeight * nPercent)) / 2.0)
+
+    let destWidth = int (float sourceWidth * nPercent)
+    let destHeight = int (float sourceHeight * nPercent)
+
+    let bmPhoto = new Bitmap(width, height, PixelFormat.Format24bppRgb)
+    bmPhoto.SetResolution(img.HorizontalResolution, img.VerticalResolution)
+
+    let grPhoto = Graphics.FromImage(bmPhoto)
+    grPhoto.Clear(Color.White)
+    grPhoto.InterpolationMode <- Drawing2D.InterpolationMode.HighQualityBicubic
+
+    grPhoto.DrawImage(img,
+        new Rectangle(destX, destY, destWidth, destHeight),
+        new Rectangle(sourceX, sourceY, sourceWidth, sourceHeight),
+        GraphicsUnit.Pixel)
+
+    grPhoto.Dispose()
+    let ms = new MemoryStream()
+    bmPhoto.Save(ms, format)
+    ms.ToArray() 
 
 /// gets the data in the metafile format of clipboard
 let tryGetEnhMetafileOnClipboard() =
@@ -46,25 +89,12 @@ let getImageBytes(format) =
     mf.Save(ms, format)
     ms.ToArray()
 
+let getImage(format, width, height) = 
+    let mf = match tryGetEnhMetafileOnClipboard() with
+             |Some v -> v
+             |None -> failwith "could not get metafile"
+    fixedSize(mf, format ,width, height) 
 
-
-let getJpeg() = getImageBytes(ImageFormat.Jpeg)
-let getPng() = getImageBytes(ImageFormat.Png)
-let getBmp() = getImageBytes(ImageFormat.MemoryBmp)
-
-
-
-
-//let getMetaFileBytesFromClipboard() =
-//    let mf = 
-//        match tryGetEnhMetafileOnClipboard() with
-//        | Some v -> v
-//        | None -> failwith "could not retrieve image from clipboard"
-//    let enhMetafileHandle = mf.GetHenhmetafile().ToInt32()
-//    let bufferSize = GetEnhMetaFileBits(enhMetafileHandle, 0, null)
-//    let buffer : byte[] = Array.zeroCreate bufferSize
-//    if GetEnhMetaFileBits(enhMetafileHandle, bufferSize, buffer) <= 0 then
-//        failwith "getMetaFile"
-//    let ms = new MemoryStream()
-//    ms.Write(buffer, 0, bufferSize)
-//    ms.ToArray()
+let getPng(width, height) = getImage(ImageFormat.Png, width, height)
+let getJpeg(width, height) = getImage(ImageFormat.Jpeg, width, height)
+let getBmp(width, height) = getImage(ImageFormat.Bmp, width, height)

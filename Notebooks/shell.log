@@ -1,0 +1,469 @@
+2014-05-02 14:58:16 - F# Interactive for F# 3.1 (private)
+2014-05-02 14:58:16 - Freely distributed under the Apache 2.0 Open Source License
+2014-05-02 14:58:16 - For help type #help;;
+2014-05-02 14:58:16 - > 
+2014-05-02 14:58:16 - --> Added 'c:\Program Files\BayardRock\IFSharp' to library include path
+2014-05-02 14:58:16 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\IfSharp.Kernel.dll'
+2014-05-02 14:58:16 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
+2014-05-02 14:58:16 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.DataVisualization.dll'
+2014-05-02 14:58:16 - --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\Type Providers\FSharp.Data.TypeProviders.dll'
+2014-05-02 14:58:16 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\FSharp.Charting.dll'
+2014-05-02 14:58:16 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\fszmq.dll'
+2014-05-02 14:58:16 - [Loading c:\Program Files\BayardRock\IFSharp\src\init.fsx]
+2014-05-02 14:58:16 - namespace FSI_0002
+2014-05-02 14:58:16 -   val m : NuGetManager
+2014-05-02 14:58:16 -   val download : package:string -> unit
+2014-05-02 14:58:16 -   type IFsi =
+2014-05-02 14:58:16 -     interface
+2014-05-02 14:58:16 -       abstract member AddPrinter : 'A -> unit
+2014-05-02 14:58:16 -     end
+2014-05-02 14:58:16 -   val fsi : IFsi
+2014-05-02 14:58:16 - [Loading c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\FsLab.fsx]
+2014-05-02 14:58:16 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/R.NET.1.5.5/lib/net40\RDotNet.dll'...
+2014-05-02 14:58:16 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/Deedle.1.0.0-alpha2/lib/net40\Deedle.dll'...
+2014-05-02 14:58:16 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/RDotNet.FSharp.0.1.2.1/lib/net40\RDotNet.FSharp.dll'...
+2014-05-02 14:58:16 - namespace FSI_0004.FsLab
+2014-05-02 14:58:16 - namespace FSI_0004.FSharp.Charting
+2014-05-02 14:58:16 -   type Chart with
+2014-05-02 14:58:16 -     static member
+2014-05-02 14:58:16 -       Line : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 14:58:16 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 14:58:16 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 14:58:16 -                when 'K : equality and 'K :> key
+2014-05-02 14:58:16 -   type Chart with
+2014-05-02 14:58:16 -     static member
+2014-05-02 14:58:16 -       Column : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 14:58:16 -                ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 14:58:16 -                ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 14:58:16 -                  when 'K : equality and 'K :> key
+2014-05-02 14:58:16 -   type Chart with
+2014-05-02 14:58:16 -     static member
+2014-05-02 14:58:16 -       Pie : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 14:58:16 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 14:58:16 -             ?XTitle:string * ?YTitle:string -> ChartTypes.PieChart
+2014-05-02 14:58:16 -               when 'K : equality and 'K :> key
+2014-05-02 14:58:16 -   type Chart with
+2014-05-02 14:58:16 -     static member
+2014-05-02 14:58:16 -       Area : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 14:58:16 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 14:58:16 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 14:58:16 -                when 'K : equality and 'K :> key
+2014-05-02 14:58:16 -   type Chart with
+2014-05-02 14:58:16 -     static member
+2014-05-02 14:58:16 -       Bar : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 14:58:16 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 14:58:16 -             ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 14:58:16 -               when 'K : equality and 'K :> key
+2014-05-02 14:58:16 - [Loading c:\Program Files\BayardRock\IFSharp\src\DeedleFormat.fs]
+2014-05-02 14:58:16 - namespace FSI_0005
+2014-05-02 14:58:16 -   val startColumnCount : int
+2014-05-02 14:58:16 -   val endColumnCount : int
+2014-05-02 14:58:16 -   val startRowCount : int
+2014-05-02 14:58:16 -   val endRowCount : int
+2014-05-02 14:58:16 -   val startItemCount : int
+2014-05-02 14:58:16 -   val endItemCount : int
+2014-05-02 14:58:16 -   val ( |SeriesValues|_| ) :
+2014-05-02 14:58:16 -     value:obj -> seq<obj * Deedle.OptionalValue<obj>> option
+2014-05-02 14:58:16 -   val formatValue : def:string -> value:'a option -> string
+2014-05-02 14:58:16 -   val td : v:string -> string
+2014-05-02 14:58:16 -   val mapSteps :
+2014-05-02 14:58:16 -     startCount:int * endCount:int ->
+2014-05-02 14:58:16 -       f:('a -> 'b) -> g:('b option -> 'c) -> input:seq<'a> -> 'c list
+2014-05-02 14:58:16 -   val fcols : int * int
+2014-05-02 14:58:16 -   val frows : int * int
+2014-05-02 14:58:16 -   val sitms : int * int
+2014-05-02 14:58:16 -   val getHtml : value:obj -> string
+2014-05-02 14:58:16 - [Loading c:\Program Files\BayardRock\IFSharp\src\ClipboardHelper.fs]
+2014-05-02 14:58:16 - namespace FSI_0006
+2014-05-02 14:58:16 -   val private CF_ENHMETAFILE : int
+2014-05-02 14:58:16 -   val OpenClipboard : HWndNewOwner:System.IntPtr -> bool
+2014-05-02 14:58:16 -   val IsClipboardFormatAvailable : Wformat:int -> int
+2014-05-02 14:58:16 -   val GetClipboardData : Wformat:int -> System.IntPtr
+2014-05-02 14:58:16 -   val CloseClipboard : unit -> int
+2014-05-02 14:58:16 -   val GetDesktopWindow : unit -> System.IntPtr
+2014-05-02 14:58:16 -   val GetEnhMetaFileBits : hemf:int * cbBuffer:int * lpbBuffer:byte [] -> int
+2014-05-02 14:58:16 -   val tryGetEnhMetafileOnClipboard :
+2014-05-02 14:58:16 -     unit -> System.Drawing.Imaging.Metafile option
+2014-05-02 14:58:16 -   val getImageBytes : format:System.Drawing.Imaging.ImageFormat -> byte []
+2014-05-02 14:58:16 -   val getJpeg : unit -> byte []
+2014-05-02 14:58:16 -   val getPng : unit -> byte []
+2014-05-02 14:58:16 -   val getBmp : unit -> byte []
+2014-05-02 14:58:16 - module FsiAutoShow = begin
+2014-05-02 14:58:16 - end
+2014-05-02 14:58:16 - val it : unit = ()
+2014-05-02 16:07:29 - F# Interactive for F# 3.1 (private)
+2014-05-02 16:07:29 - Freely distributed under the Apache 2.0 Open Source License
+2014-05-02 16:07:29 - For help type #help;;
+2014-05-02 16:07:29 - > 
+2014-05-02 16:07:29 - --> Added 'c:\Program Files\BayardRock\IFSharp' to library include path
+2014-05-02 16:07:29 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\IfSharp.Kernel.dll'
+2014-05-02 16:07:29 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
+2014-05-02 16:07:29 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.DataVisualization.dll'
+2014-05-02 16:07:29 - --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\Type Providers\FSharp.Data.TypeProviders.dll'
+2014-05-02 16:07:29 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\FSharp.Charting.dll'
+2014-05-02 16:07:29 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\fszmq.dll'
+2014-05-02 16:07:29 - [Loading c:\Program Files\BayardRock\IFSharp\src\init.fsx]
+2014-05-02 16:07:29 - namespace FSI_0002
+2014-05-02 16:07:29 -   val m : NuGetManager
+2014-05-02 16:07:29 -   val download : package:string -> unit
+2014-05-02 16:07:29 -   type IFsi =
+2014-05-02 16:07:29 -     interface
+2014-05-02 16:07:29 -       abstract member AddPrinter : 'A -> unit
+2014-05-02 16:07:29 -     end
+2014-05-02 16:07:29 -   val fsi : IFsi
+2014-05-02 16:07:29 - [Loading c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\FsLab.fsx]
+2014-05-02 16:07:29 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/R.NET.1.5.5/lib/net40\RDotNet.dll'...
+2014-05-02 16:07:29 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/Deedle.1.0.0-alpha2/lib/net40\Deedle.dll'...
+2014-05-02 16:07:29 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/RDotNet.FSharp.0.1.2.1/lib/net40\RDotNet.FSharp.dll'...
+2014-05-02 16:07:29 - namespace FSI_0004.FsLab
+2014-05-02 16:07:29 - namespace FSI_0004.FSharp.Charting
+2014-05-02 16:07:29 -   type Chart with
+2014-05-02 16:07:29 -     static member
+2014-05-02 16:07:29 -       Line : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:07:29 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:07:29 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:07:29 -                when 'K : equality and 'K :> key
+2014-05-02 16:07:29 -   type Chart with
+2014-05-02 16:07:29 -     static member
+2014-05-02 16:07:29 -       Column : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:07:29 -                ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:07:29 -                ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:07:29 -                  when 'K : equality and 'K :> key
+2014-05-02 16:07:29 -   type Chart with
+2014-05-02 16:07:29 -     static member
+2014-05-02 16:07:29 -       Pie : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:07:29 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:07:29 -             ?XTitle:string * ?YTitle:string -> ChartTypes.PieChart
+2014-05-02 16:07:29 -               when 'K : equality and 'K :> key
+2014-05-02 16:07:29 -   type Chart with
+2014-05-02 16:07:29 -     static member
+2014-05-02 16:07:29 -       Area : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:07:29 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:07:29 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:07:29 -                when 'K : equality and 'K :> key
+2014-05-02 16:07:29 -   type Chart with
+2014-05-02 16:07:29 -     static member
+2014-05-02 16:07:29 -       Bar : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:07:29 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:07:29 -             ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:07:29 -               when 'K : equality and 'K :> key
+2014-05-02 16:07:29 - [Loading c:\Program Files\BayardRock\IFSharp\src\DeedleFormat.fs]
+2014-05-02 16:07:29 - namespace FSI_0005
+2014-05-02 16:07:29 -   val startColumnCount : int
+2014-05-02 16:07:29 -   val endColumnCount : int
+2014-05-02 16:07:29 -   val startRowCount : int
+2014-05-02 16:07:29 -   val endRowCount : int
+2014-05-02 16:07:29 -   val startItemCount : int
+2014-05-02 16:07:29 -   val endItemCount : int
+2014-05-02 16:07:29 -   val ( |SeriesValues|_| ) :
+2014-05-02 16:07:29 -     value:obj -> seq<obj * Deedle.OptionalValue<obj>> option
+2014-05-02 16:07:29 -   val formatValue : def:string -> value:'a option -> string
+2014-05-02 16:07:29 -   val td : v:string -> string
+2014-05-02 16:07:29 -   val mapSteps :
+2014-05-02 16:07:29 -     startCount:int * endCount:int ->
+2014-05-02 16:07:29 -       f:('a -> 'b) -> g:('b option -> 'c) -> input:seq<'a> -> 'c list
+2014-05-02 16:07:29 -   val fcols : int * int
+2014-05-02 16:07:29 -   val frows : int * int
+2014-05-02 16:07:29 -   val sitms : int * int
+2014-05-02 16:07:29 -   val getHtml : value:obj -> string
+2014-05-02 16:07:29 - [Loading c:\Program Files\BayardRock\IFSharp\src\ClipboardHelper.fs]
+2014-05-02 16:07:29 - namespace FSI_0006
+2014-05-02 16:07:29 -   val private CF_ENHMETAFILE : int
+2014-05-02 16:07:29 -   val OpenClipboard : HWndNewOwner:System.IntPtr -> bool
+2014-05-02 16:07:29 -   val IsClipboardFormatAvailable : Wformat:int -> int
+2014-05-02 16:07:29 -   val GetClipboardData : Wformat:int -> System.IntPtr
+2014-05-02 16:07:29 -   val CloseClipboard : unit -> int
+2014-05-02 16:07:29 -   val GetDesktopWindow : unit -> System.IntPtr
+2014-05-02 16:07:29 -   val GetEnhMetaFileBits : hemf:int * cbBuffer:int * lpbBuffer:byte [] -> int
+2014-05-02 16:07:29 -   val tryGetEnhMetafileOnClipboard :
+2014-05-02 16:07:29 -     unit -> System.Drawing.Imaging.Metafile option
+2014-05-02 16:07:29 -   val getImageBytes : format:System.Drawing.Imaging.ImageFormat -> byte []
+2014-05-02 16:07:29 -   val getJpeg : unit -> byte []
+2014-05-02 16:07:29 -   val getPng : unit -> byte []
+2014-05-02 16:07:29 -   val getBmp : unit -> byte []
+2014-05-02 16:07:29 - module FsiAutoShow = begin
+2014-05-02 16:07:29 - end
+2014-05-02 16:07:29 - val it : unit = ()
+2014-05-02 16:09:39 - F# Interactive for F# 3.1 (private)
+2014-05-02 16:09:39 - Freely distributed under the Apache 2.0 Open Source License
+2014-05-02 16:09:39 - For help type #help;;
+2014-05-02 16:09:39 - > 
+2014-05-02 16:09:39 - --> Added 'c:\Program Files\BayardRock\IFSharp' to library include path
+2014-05-02 16:09:39 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\IfSharp.Kernel.dll'
+2014-05-02 16:09:39 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
+2014-05-02 16:09:39 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.DataVisualization.dll'
+2014-05-02 16:09:39 - --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\Type Providers\FSharp.Data.TypeProviders.dll'
+2014-05-02 16:09:39 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\FSharp.Charting.dll'
+2014-05-02 16:09:39 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\fszmq.dll'
+2014-05-02 16:09:39 - [Loading c:\Program Files\BayardRock\IFSharp\src\init.fsx]
+2014-05-02 16:09:39 - namespace FSI_0002
+2014-05-02 16:09:39 -   val m : NuGetManager
+2014-05-02 16:09:39 -   val download : package:string -> unit
+2014-05-02 16:09:39 -   type IFsi =
+2014-05-02 16:09:39 -     interface
+2014-05-02 16:09:39 -       abstract member AddPrinter : 'A -> unit
+2014-05-02 16:09:39 -     end
+2014-05-02 16:09:39 -   val fsi : IFsi
+2014-05-02 16:09:39 - [Loading c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\FsLab.fsx]
+2014-05-02 16:09:39 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/R.NET.1.5.5/lib/net40\RDotNet.dll'...
+2014-05-02 16:09:39 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/Deedle.1.0.0-alpha2/lib/net40\Deedle.dll'...
+2014-05-02 16:09:39 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/RDotNet.FSharp.0.1.2.1/lib/net40\RDotNet.FSharp.dll'...
+2014-05-02 16:09:39 - namespace FSI_0004.FsLab
+2014-05-02 16:09:39 - namespace FSI_0004.FSharp.Charting
+2014-05-02 16:09:39 -   type Chart with
+2014-05-02 16:09:39 -     static member
+2014-05-02 16:09:39 -       Line : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:09:39 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:09:39 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:09:39 -                when 'K : equality and 'K :> key
+2014-05-02 16:09:39 -   type Chart with
+2014-05-02 16:09:39 -     static member
+2014-05-02 16:09:39 -       Column : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:09:39 -                ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:09:39 -                ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:09:39 -                  when 'K : equality and 'K :> key
+2014-05-02 16:09:39 -   type Chart with
+2014-05-02 16:09:39 -     static member
+2014-05-02 16:09:39 -       Pie : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:09:39 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:09:39 -             ?XTitle:string * ?YTitle:string -> ChartTypes.PieChart
+2014-05-02 16:09:39 -               when 'K : equality and 'K :> key
+2014-05-02 16:09:39 -   type Chart with
+2014-05-02 16:09:39 -     static member
+2014-05-02 16:09:39 -       Area : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:09:39 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:09:39 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:09:39 -                when 'K : equality and 'K :> key
+2014-05-02 16:09:39 -   type Chart with
+2014-05-02 16:09:39 -     static member
+2014-05-02 16:09:39 -       Bar : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:09:39 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:09:39 -             ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:09:39 -               when 'K : equality and 'K :> key
+2014-05-02 16:09:39 - [Loading c:\Program Files\BayardRock\IFSharp\src\DeedleFormat.fs]
+2014-05-02 16:09:39 - namespace FSI_0005
+2014-05-02 16:09:39 -   val startColumnCount : int
+2014-05-02 16:09:39 -   val endColumnCount : int
+2014-05-02 16:09:39 -   val startRowCount : int
+2014-05-02 16:09:39 -   val endRowCount : int
+2014-05-02 16:09:39 -   val startItemCount : int
+2014-05-02 16:09:39 -   val endItemCount : int
+2014-05-02 16:09:39 -   val ( |SeriesValues|_| ) :
+2014-05-02 16:09:39 -     value:obj -> seq<obj * Deedle.OptionalValue<obj>> option
+2014-05-02 16:09:39 -   val formatValue : def:string -> value:'a option -> string
+2014-05-02 16:09:39 -   val td : v:string -> string
+2014-05-02 16:09:39 -   val mapSteps :
+2014-05-02 16:09:39 -     startCount:int * endCount:int ->
+2014-05-02 16:09:39 -       f:('a -> 'b) -> g:('b option -> 'c) -> input:seq<'a> -> 'c list
+2014-05-02 16:09:39 -   val fcols : int * int
+2014-05-02 16:09:39 -   val frows : int * int
+2014-05-02 16:09:39 -   val sitms : int * int
+2014-05-02 16:09:39 -   val getHtml : value:obj -> string
+2014-05-02 16:09:39 - [Loading c:\Program Files\BayardRock\IFSharp\src\ClipboardHelper.fs]
+2014-05-02 16:09:39 - namespace FSI_0006
+2014-05-02 16:09:39 -   val private CF_ENHMETAFILE : int
+2014-05-02 16:09:39 -   val OpenClipboard : HWndNewOwner:System.IntPtr -> bool
+2014-05-02 16:09:39 -   val IsClipboardFormatAvailable : Wformat:int -> int
+2014-05-02 16:09:39 -   val GetClipboardData : Wformat:int -> System.IntPtr
+2014-05-02 16:09:39 -   val CloseClipboard : unit -> int
+2014-05-02 16:09:39 -   val GetDesktopWindow : unit -> System.IntPtr
+2014-05-02 16:09:39 -   val GetEnhMetaFileBits : hemf:int * cbBuffer:int * lpbBuffer:byte [] -> int
+2014-05-02 16:09:39 -   val fixedSize : img:System.Drawing.Image * width:int * height:int -> byte []
+2014-05-02 16:09:39 -   val tryGetEnhMetafileOnClipboard :
+2014-05-02 16:09:39 -     unit -> System.Drawing.Imaging.Metafile option
+2014-05-02 16:09:39 -   val getImageBytes : format:System.Drawing.Imaging.ImageFormat -> byte []
+2014-05-02 16:09:39 -   val getPng : width:int * height:int -> byte []
+2014-05-02 16:09:39 - module FsiAutoShow = begin
+2014-05-02 16:09:39 - end
+2014-05-02 16:09:39 - val it : unit = ()
+2014-05-02 16:13:55 - F# Interactive for F# 3.1 (private)
+2014-05-02 16:13:55 - Freely distributed under the Apache 2.0 Open Source License
+2014-05-02 16:13:55 - For help type #help;;
+2014-05-02 16:13:55 - > 
+2014-05-02 16:13:55 - --> Added 'c:\Program Files\BayardRock\IFSharp' to library include path
+2014-05-02 16:13:55 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\IfSharp.Kernel.dll'
+2014-05-02 16:13:55 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
+2014-05-02 16:13:55 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.DataVisualization.dll'
+2014-05-02 16:13:55 - --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\Type Providers\FSharp.Data.TypeProviders.dll'
+2014-05-02 16:13:55 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\FSharp.Charting.dll'
+2014-05-02 16:13:55 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\fszmq.dll'
+2014-05-02 16:13:55 - [Loading c:\Program Files\BayardRock\IFSharp\src\init.fsx]
+2014-05-02 16:13:55 - namespace FSI_0002
+2014-05-02 16:13:55 -   val m : NuGetManager
+2014-05-02 16:13:55 -   val download : package:string -> unit
+2014-05-02 16:13:55 -   type IFsi =
+2014-05-02 16:13:55 -     interface
+2014-05-02 16:13:55 -       abstract member AddPrinter : 'A -> unit
+2014-05-02 16:13:55 -     end
+2014-05-02 16:13:55 -   val fsi : IFsi
+2014-05-02 16:13:55 - [Loading c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\FsLab.fsx]
+2014-05-02 16:13:55 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/R.NET.1.5.5/lib/net40\RDotNet.dll'...
+2014-05-02 16:13:55 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/Deedle.1.0.0-alpha2/lib/net40\Deedle.dll'...
+2014-05-02 16:13:55 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/RDotNet.FSharp.0.1.2.1/lib/net40\RDotNet.FSharp.dll'...
+2014-05-02 16:13:55 - namespace FSI_0004.FsLab
+2014-05-02 16:13:55 - namespace FSI_0004.FSharp.Charting
+2014-05-02 16:13:55 -   type Chart with
+2014-05-02 16:13:55 -     static member
+2014-05-02 16:13:55 -       Line : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:13:55 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:13:55 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:13:55 -                when 'K : equality and 'K :> key
+2014-05-02 16:13:55 -   type Chart with
+2014-05-02 16:13:55 -     static member
+2014-05-02 16:13:55 -       Column : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:13:55 -                ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:13:55 -                ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:13:55 -                  when 'K : equality and 'K :> key
+2014-05-02 16:13:55 -   type Chart with
+2014-05-02 16:13:55 -     static member
+2014-05-02 16:13:55 -       Pie : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:13:55 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:13:55 -             ?XTitle:string * ?YTitle:string -> ChartTypes.PieChart
+2014-05-02 16:13:55 -               when 'K : equality and 'K :> key
+2014-05-02 16:13:55 -   type Chart with
+2014-05-02 16:13:55 -     static member
+2014-05-02 16:13:55 -       Area : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:13:55 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:13:55 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:13:55 -                when 'K : equality and 'K :> key
+2014-05-02 16:13:55 -   type Chart with
+2014-05-02 16:13:55 -     static member
+2014-05-02 16:13:55 -       Bar : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:13:55 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:13:55 -             ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:13:55 -               when 'K : equality and 'K :> key
+2014-05-02 16:13:55 - [Loading c:\Program Files\BayardRock\IFSharp\src\DeedleFormat.fs]
+2014-05-02 16:13:55 - namespace FSI_0005
+2014-05-02 16:13:55 -   val startColumnCount : int
+2014-05-02 16:13:55 -   val endColumnCount : int
+2014-05-02 16:13:55 -   val startRowCount : int
+2014-05-02 16:13:55 -   val endRowCount : int
+2014-05-02 16:13:55 -   val startItemCount : int
+2014-05-02 16:13:55 -   val endItemCount : int
+2014-05-02 16:13:55 -   val ( |SeriesValues|_| ) :
+2014-05-02 16:13:55 -     value:obj -> seq<obj * Deedle.OptionalValue<obj>> option
+2014-05-02 16:13:55 -   val formatValue : def:string -> value:'a option -> string
+2014-05-02 16:13:55 -   val td : v:string -> string
+2014-05-02 16:13:55 -   val mapSteps :
+2014-05-02 16:13:55 -     startCount:int * endCount:int ->
+2014-05-02 16:13:55 -       f:('a -> 'b) -> g:('b option -> 'c) -> input:seq<'a> -> 'c list
+2014-05-02 16:13:55 -   val fcols : int * int
+2014-05-02 16:13:55 -   val frows : int * int
+2014-05-02 16:13:55 -   val sitms : int * int
+2014-05-02 16:13:55 -   val getHtml : value:obj -> string
+2014-05-02 16:13:55 - [Loading c:\Program Files\BayardRock\IFSharp\src\ClipboardHelper.fs]
+2014-05-02 16:13:55 - namespace FSI_0006
+2014-05-02 16:13:55 -   val private CF_ENHMETAFILE : int
+2014-05-02 16:13:55 -   val OpenClipboard : HWndNewOwner:System.IntPtr -> bool
+2014-05-02 16:13:55 -   val IsClipboardFormatAvailable : Wformat:int -> int
+2014-05-02 16:13:55 -   val GetClipboardData : Wformat:int -> System.IntPtr
+2014-05-02 16:13:55 -   val CloseClipboard : unit -> int
+2014-05-02 16:13:55 -   val GetDesktopWindow : unit -> System.IntPtr
+2014-05-02 16:13:55 -   val GetEnhMetaFileBits : hemf:int * cbBuffer:int * lpbBuffer:byte [] -> int
+2014-05-02 16:13:55 -   val fixedSize : img:System.Drawing.Image * width:int * height:int -> byte []
+2014-05-02 16:13:55 -   val tryGetEnhMetafileOnClipboard :
+2014-05-02 16:13:55 -     unit -> System.Drawing.Imaging.Metafile option
+2014-05-02 16:13:55 -   val getImageBytes : format:System.Drawing.Imaging.ImageFormat -> byte []
+2014-05-02 16:13:55 -   val getPng : width:int * height:int -> byte []
+2014-05-02 16:13:55 - module FsiAutoShow = begin
+2014-05-02 16:13:55 - end
+2014-05-02 16:13:55 - val it : unit = ()
+2014-05-02 16:18:07 - F# Interactive for F# 3.1 (private)
+2014-05-02 16:18:07 - Freely distributed under the Apache 2.0 Open Source License
+2014-05-02 16:18:07 - For help type #help;;
+2014-05-02 16:18:07 - > 
+2014-05-02 16:18:07 - --> Added 'c:\Program Files\BayardRock\IFSharp' to library include path
+2014-05-02 16:18:07 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\IfSharp.Kernel.dll'
+2014-05-02 16:18:07 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
+2014-05-02 16:18:07 - --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.DataVisualization.dll'
+2014-05-02 16:18:07 - --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\Type Providers\FSharp.Data.TypeProviders.dll'
+2014-05-02 16:18:07 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\FSharp.Charting.dll'
+2014-05-02 16:18:07 - --> Referenced 'c:\Program Files\BayardRock\IFSharp\fszmq.dll'
+2014-05-02 16:18:07 - [Loading c:\Program Files\BayardRock\IFSharp\src\init.fsx]
+2014-05-02 16:18:07 - namespace FSI_0002
+2014-05-02 16:18:07 -   val m : NuGetManager
+2014-05-02 16:18:07 -   val download : package:string -> unit
+2014-05-02 16:18:07 -   type IFsi =
+2014-05-02 16:18:07 -     interface
+2014-05-02 16:18:07 -       abstract member AddPrinter : 'A -> unit
+2014-05-02 16:18:07 -     end
+2014-05-02 16:18:07 -   val fsi : IFsi
+2014-05-02 16:18:07 - [Loading c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\FsLab.fsx]
+2014-05-02 16:18:07 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/R.NET.1.5.5/lib/net40\RDotNet.dll'...
+2014-05-02 16:18:07 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/Deedle.1.0.0-alpha2/lib/net40\Deedle.dll'...
+2014-05-02 16:18:07 - Binding session to 'c:\Program Files\BayardRock\IFSharp\src\packages\FsLab.0.0.13-beta\../../packages/RDotNet.FSharp.0.1.2.1/lib/net40\RDotNet.FSharp.dll'...
+2014-05-02 16:18:07 - namespace FSI_0004.FsLab
+2014-05-02 16:18:07 - namespace FSI_0004.FSharp.Charting
+2014-05-02 16:18:07 -   type Chart with
+2014-05-02 16:18:07 -     static member
+2014-05-02 16:18:07 -       Line : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:18:07 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:18:07 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:18:07 -                when 'K : equality and 'K :> key
+2014-05-02 16:18:07 -   type Chart with
+2014-05-02 16:18:07 -     static member
+2014-05-02 16:18:07 -       Column : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:18:07 -                ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:18:07 -                ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:18:07 -                  when 'K : equality and 'K :> key
+2014-05-02 16:18:07 -   type Chart with
+2014-05-02 16:18:07 -     static member
+2014-05-02 16:18:07 -       Pie : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:18:07 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:18:07 -             ?XTitle:string * ?YTitle:string -> ChartTypes.PieChart
+2014-05-02 16:18:07 -               when 'K : equality and 'K :> key
+2014-05-02 16:18:07 -   type Chart with
+2014-05-02 16:18:07 -     static member
+2014-05-02 16:18:07 -       Area : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:18:07 -              ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:18:07 -              ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:18:07 -                when 'K : equality and 'K :> key
+2014-05-02 16:18:07 -   type Chart with
+2014-05-02 16:18:07 -     static member
+2014-05-02 16:18:07 -       Bar : data:Deedle.Series<'K,#value> * ?Name:string * ?Title:string *
+2014-05-02 16:18:07 -             ?Labels:#seq<string> * ?Color:System.Drawing.Color *
+2014-05-02 16:18:07 -             ?XTitle:string * ?YTitle:string -> ChartTypes.GenericChart
+2014-05-02 16:18:07 -               when 'K : equality and 'K :> key
+2014-05-02 16:18:07 - [Loading c:\Program Files\BayardRock\IFSharp\src\DeedleFormat.fs]
+2014-05-02 16:18:07 - namespace FSI_0005
+2014-05-02 16:18:07 -   val startColumnCount : int
+2014-05-02 16:18:07 -   val endColumnCount : int
+2014-05-02 16:18:07 -   val startRowCount : int
+2014-05-02 16:18:07 -   val endRowCount : int
+2014-05-02 16:18:07 -   val startItemCount : int
+2014-05-02 16:18:07 -   val endItemCount : int
+2014-05-02 16:18:07 -   val ( |SeriesValues|_| ) :
+2014-05-02 16:18:07 -     value:obj -> seq<obj * Deedle.OptionalValue<obj>> option
+2014-05-02 16:18:07 -   val formatValue : def:string -> value:'a option -> string
+2014-05-02 16:18:07 -   val td : v:string -> string
+2014-05-02 16:18:07 -   val mapSteps :
+2014-05-02 16:18:07 -     startCount:int * endCount:int ->
+2014-05-02 16:18:07 -       f:('a -> 'b) -> g:('b option -> 'c) -> input:seq<'a> -> 'c list
+2014-05-02 16:18:07 -   val fcols : int * int
+2014-05-02 16:18:07 -   val frows : int * int
+2014-05-02 16:18:07 -   val sitms : int * int
+2014-05-02 16:18:07 -   val getHtml : value:obj -> string
+2014-05-02 16:18:07 - [Loading c:\Program Files\BayardRock\IFSharp\src\ClipboardHelper.fs]
+2014-05-02 16:18:07 - namespace FSI_0006
+2014-05-02 16:18:07 -   val private CF_ENHMETAFILE : int
+2014-05-02 16:18:07 -   val OpenClipboard : HWndNewOwner:System.IntPtr -> bool
+2014-05-02 16:18:07 -   val IsClipboardFormatAvailable : Wformat:int -> int
+2014-05-02 16:18:07 -   val GetClipboardData : Wformat:int -> System.IntPtr
+2014-05-02 16:18:07 -   val CloseClipboard : unit -> int
+2014-05-02 16:18:07 -   val GetDesktopWindow : unit -> System.IntPtr
+2014-05-02 16:18:07 -   val GetEnhMetaFileBits : hemf:int * cbBuffer:int * lpbBuffer:byte [] -> int
+2014-05-02 16:18:07 -   val fixedSize :
+2014-05-02 16:18:07 -     img:System.Drawing.Image * format:System.Drawing.Imaging.ImageFormat *
+2014-05-02 16:18:07 -     width:int * height:int -> byte []
+2014-05-02 16:18:07 -   val tryGetEnhMetafileOnClipboard :
+2014-05-02 16:18:07 -     unit -> System.Drawing.Imaging.Metafile option
+2014-05-02 16:18:07 -   val getImageBytes : format:System.Drawing.Imaging.ImageFormat -> byte []
+2014-05-02 16:18:07 -   val getImage :
+2014-05-02 16:18:07 -     format:System.Drawing.Imaging.ImageFormat * width:int * height:int ->
+2014-05-02 16:18:07 -       byte []
+2014-05-02 16:18:07 -   val getPng : width:int * height:int -> byte []
+2014-05-02 16:18:07 -   val getJpeg : width:int * height:int -> byte []
+2014-05-02 16:18:07 -   val getBmp : width:int * height:int -> byte []
+2014-05-02 16:18:07 - module FsiAutoShow = begin
+2014-05-02 16:18:07 - end
+2014-05-02 16:18:07 - val it : unit = ()
