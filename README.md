@@ -7,7 +7,7 @@ IfSharpLab
 
 2) Move files to IFSharp directory (default C:\Program Files\BayardRock\IFSharp)  
   - replace ``Include.fsx``
-  - move ``src`` folder to IFSharp root folder
+  - move ``src`` folder to IFSharp root folder (verify that the src folder is read/write enabled)
 
 3) launch ``Notebooks/ifsharp.cmd``
 
