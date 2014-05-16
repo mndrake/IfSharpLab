@@ -12,5 +12,10 @@ IfSharpLab
 3) launch ``Notebooks/ifsharp.cmd``
 
 
-See included DeedleExample notebook for an example of the Deedle pretty print formatter.
-http://nbviewer.ipython.org/github/mndrake/IfSharpLab/blob/master/Notebooks/DeedleExample.ipynb
+__Examples__
+
+**Deedle**  
+http://nbviewer.ipython.org/github/mndrake/IfSharpLab/blob/master/Notebooks/DeedleExample.ipynb  
+
+**R graphics**  
+http://nbviewer.ipython.org/github/mndrake/IfSharpLab/blob/master/Notebooks/RGraphicsExample.ipynb  
