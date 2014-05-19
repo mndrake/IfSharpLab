@@ -19,3 +19,6 @@ http://nbviewer.ipython.org/github/mndrake/IfSharpLab/blob/master/Notebooks/Deed
 
 **R graphics**  
 http://nbviewer.ipython.org/github/mndrake/IfSharpLab/blob/master/Notebooks/RGraphicsExample.ipynb  
+
+**R Neural Network (http://sergeytihon.wordpress.com/2013/11/18/f-neural-networks-with-rprovider-deedle/)**
+http://nbviewer.ipython.org/github/mndrake/IfSharpLab/blob/master/Notebooks/NeuralNetworkExample.ipynb
