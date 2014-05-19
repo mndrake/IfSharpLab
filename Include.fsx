@@ -26,28 +26,30 @@ open Init
 module FsiAutoShow =
   open RProvider
   open RProvider.``base``
+  open RProvider.graphics
   open RProvider.grDevices
     
   // disable default R graphics device
   R.graphics_off()
 
-  // add Deedle printer
-  App.AddFsiPrinter(fun (printer:Deedle.Internal.IFsiFormattable) -> "\n" + (printer.Format()))
-
-  // add R printer
-  App.AddFsiPrinter(fun (symexpr:RDotNet.SymbolicExpression) ->
+// add R printer
+  App.AddFsiPrinter(fun (expr : RDotNet.SymbolicExpression) -> 
+    //TODO : Add logic for other types of R objects via RDotNet.SymbolicExpressionExtension
     let png = R.eval(R.parse(text="png"))
     let file = System.IO.Path.GetTempFileName() + ".png"
-    let args = namedParams [ "device", box png; "filename", box file ]
-    symexpr |> ignore
-    R.dev_off(R.dev_copy(args)) |> ignore
-    R.graphics_off() |> ignore
-    let img = Util.Image (file)
+    let args = namedParams [ "device", box png; "filename", box file ]    
+    expr.Print() |> ignore
+    try
+      R.dev_off(R.dev_copy(args)) |> ignore  
+    finally
+      R.graphics_off() |> ignore
+    Util.Image(file) |> Display
     System.IO.File.Delete(file)
-    img |> Display
-    symexpr.Print()
-  )
+    expr.ToString()
+    )
 
+  // add Deedle printer
+  App.AddFsiPrinter(fun (printer:Deedle.Internal.IFsiFormattable) -> "\n" + (printer.Format()))
 
 // open global namespaces
 open FSharp.Charting
